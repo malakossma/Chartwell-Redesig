@@ -342,70 +342,123 @@ body, html {
 
 }
 
-
-
-.trust h1 {
-  font-size: 46px;
-  color:var(--main);
-  margin-bottom: 25px;
-  font-family: Georgia, serif;
-  margin-left: 20px;
+:root{
+  --main: #1B4332;
+  --dark: #0F2E23;
+  --accent: #C6A75E;
+  --light: #F8F9FA;
+  --soft: #E9ECEF;
+  --text: #333;
 }
 
 
-.trust .intro {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 60px;
-  max-width: 900px;
-  margin-left: 20px;
+.trust{
+  background: var(--light);
+  padding: 80px 0;
+  font-family: 'Segoe UI', sans-serif;
 }
-.trust-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-  max-width: 1200px;
+
+.trust-container{
+  width: 85%;
   margin: auto;
 }
 
-.trust-values {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+
+.trust-header{
+  max-width: 700px;
+  margin-bottom: 50px;
 }
 
-.trust-stats {
+.trust-header h2{
+  font-size: 40px;
+  color: var(--main);
+  margin-bottom: 20px;
+}
+
+.trust-header p{
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+
+.trust-content{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+
+.trust-values{
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.trust-item{
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--soft);
+  transition: 0.3s ease;
+}
+
+.trust-item:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.trust-item h3{
+  color: var(--main);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.trust-item p{
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Stats */
+.trust-stats{
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 20px;
 }
 
-.trust-item h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
- color:var(--main);
+.stat-box{
+  background: var(--dark);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.trust-item p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #555;
-}
-
-.stat-box h2 {
-  font-size: 48px;
+.stat-box h3{
+  font-size: 36px;
   color: var(--accent);
-  margin: 0;
+  margin-bottom: 10px;
 }
 
-.stat-box p {
-  font-size: 16px;
-  color: #333;
-  max-width: 220px;
+.stat-box p{
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
+
+@media (max-width: 992px){
+  .trust-content{
+    flex-direction: column;
+  }
+
+  .trust-values{
+    grid-template-columns: 1fr;
+  }
+}
 
 .site-footer {
   margin-top: 30px;
