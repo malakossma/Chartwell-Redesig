@@ -11,14 +11,15 @@
 
 <header class="navbar">
   <div class="nav_container">Chartwell<span>Partners</span></div>
-  <nav>
-    <ul class="nav_links">
-      <li><a href="#">Our Firm</a></li>
-      <li><a href="#">Expertise ▾</a></li>
-      <li><a href="#">Service ▾</a></li>
-      <li><a href="#" class="contact-btn">Contact Us</a></li>
-    </ul>
-  </nav>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <ul class="nav_links" id="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About  ▾</a></li>
+    <li><a href="#">Services  ▾</a></li>
+    <li><a href="#" class="contact-btn">Contact Us</a></li>
+  </ul>
 </header>
 
 <section class="hero">
@@ -56,7 +57,7 @@
   <section class="expertise">
     <div class="card">
       <div class="icon">🏦</div>
-      <h2>Financial Services</h2>
+      <h3>Financial Services</h3>
       <ul>
         <li>Commercial, Community and Private Banking</li>
         <li>Mortgage</li>
@@ -265,6 +266,15 @@ window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 </script>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+</body>
 
 </body>
 </html>
